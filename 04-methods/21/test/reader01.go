@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"strings"
+)
+
+func main() {
+	r := strings.NewReader("Hello world!")
+	b := make([]byte, 8)
+
+	for {
+		n, err := r.Read(b)
+		fmt.Printf("%v, %v, %v\n", n, err, b)
+		fmt.Printf("%q\n", b[:])
+		if err == io.EOF {
+			break
+		}
+	}
+}
