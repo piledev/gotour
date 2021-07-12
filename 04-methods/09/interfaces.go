@@ -19,7 +19,7 @@ func main() {
 	// f を代入し、MyFloat レシーバの Abs が有効になったが、
 	// &v で上書きしたので、*Vertex レシーバの Abs が有効になった。
 
-	// In the following line, v is aa Vertex (not * Vertex)
+	// In the following line, v is a Vertex (not * Vertex)
 	// and does NOT implement Abser.
 	// a = v
 
